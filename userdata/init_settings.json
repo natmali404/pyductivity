@@ -1,0 +1,48 @@
+{
+	"basic_config":
+	{
+		"username": "", 
+		"main_color": "#000000", 
+		"accent_color": "#bdbdbd"
+	},
+	"widget_1":
+	{
+		"initialized": "no", 
+		"type": ""
+	},
+	"widget_2":
+	{
+		"initialized": "no", 
+		"type": ""
+	},
+	"widget_3":
+	{
+		"initialized": "no", 
+		"type": ""
+	},
+	"widget_4":
+	{
+		"initialized": "no", 
+		"type": ""
+	},
+	"widget_5":
+	{
+		"initialized": "no", 
+		"type": ""
+	},
+	"widget_6":
+	{
+		"initialized": "no", 
+		"type": ""
+	},
+	"widget_7":
+	{
+		"initialized": "no", 
+		"type": ""
+	},
+	"widget_8":
+	{
+		"initialized": "no", 
+		"type": ""
+	}
+}
