@@ -1,0 +1,42 @@
+{
+    "widget_1": {
+        "initialized": "no",
+        "type": "",
+        "content": ""
+    },
+    "widget_2": {
+        "initialized": "yes",
+        "type": "pomodoro",
+        "content": "pomodoro_20240606000005.json"
+    },
+    "widget_3": {
+        "initialized": "no",
+        "type": "",
+        "content": ""
+    },
+    "widget_4": {
+        "initialized": "no",
+        "type": "",
+        "content": ""
+    },
+    "widget_5": {
+        "initialized": "no",
+        "type": "",
+        "content": ""
+    },
+    "widget_6": {
+        "initialized": "no",
+        "type": "",
+        "content": ""
+    },
+    "widget_7": {
+        "initialized": "yes",
+        "type": "notes",
+        "content": "notes_20240606000009.json"
+    },
+    "widget_8": {
+        "initialized": "no",
+        "type": "",
+        "content": ""
+    }
+}
