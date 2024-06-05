@@ -6,8 +6,8 @@ from datetime import datetime
 class AppData():
     def __init__(self):
         self.user_settings, self.widget_settings = self.load_settings()
-        print(f"Loaded user settings: {self.user_settings}")
-        print(f"Loaded widget settings: {self.widget_settings}")
+        #print(f"Loaded user settings: {self.user_settings}")
+        #print(f"Loaded widget settings: {self.widget_settings}")
         self.widget_grid = {}
         self.widget_slots = widget_slots
         self.reinitiate_slots()
@@ -17,18 +17,18 @@ class AppData():
         try:   
             with open('userdata/user_settings.json', 'r') as f:
                 user_settings = json.load(f)
-                print(f'User data loaded successfully: {user_settings}')      
+                #print(f'User data loaded successfully: {user_settings}')      
         except FileNotFoundError:
             user_settings = self.generate_new_user_settings()
-            print(f'Error loading data! New date file created: {user_settings}')
+            #print(f'Error loading data! New date file created: {user_settings}')
 
         try:
             with open('userdata/widget_settings.json', 'r') as f:
                 widget_settings = json.load(f)
-                print(f'Widget data loaded successfully: {widget_settings}') 
+                #print(f'Widget data loaded successfully: {widget_settings}') 
         except FileNotFoundError:
             widget_settings = self.generate_new_widget_settings()
-            print(f'Error loading data! New date file created: {widget_settings}')
+            #print(f'Error loading data! New date file created: {widget_settings}')
         
         return user_settings, widget_settings
 
@@ -39,7 +39,7 @@ class AppData():
         with open('userdata/widget_settings.json', 'w') as f:
             json.dump(self.widget_settings, f, indent=4)
             
-        print(f'Data saved successfully:\n->{self.user_settings}\n->{self.widget_settings}')
+        #print(f'Data saved successfully:\n->{self.user_settings}\n->{self.widget_settings}')
             
        
         
@@ -126,12 +126,12 @@ class AppData():
     def generate_new_user_settings(self) -> dict:
         with open('userdata/user_settings.json', 'w') as file:
             json.dump(default_basic_settings, file, indent=4)
-        print("user_settings.json file has been created with the default structure.")
+        #print("user_settings.json file has been created with the default structure.")
         return default_basic_settings
     
     def generate_new_widget_settings(self) -> dict:
         widgets_data = {widget_name: default_widget_settings.copy() for widget_name in widget_list}
         with open('userdata/widget_settings.json', 'w') as file:
             json.dump(widgets_data, file, indent=4)
-        print("widget_settings.json file has been created with the default structure.")
+        #print("widget_settings.json file has been created with the default structure.")
         return widgets_data

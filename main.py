@@ -25,12 +25,19 @@ def is_admin() -> bool:
     except:
         return False
 
-def run_as_admin() -> None:
-    if sys.platform == 'win32':
-        if not is_admin():
-            ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
-
-
+def request_admin_privileges() -> None:
+    if sys.platform == 'win32' and not is_admin():
+        #print("not an admin!")
+        params = " ".join(sys.argv)
+        try:
+            result = ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, params, None, 1)
+            if result > 32:
+                sys.exit(0)
+        except Exception as e:
+            print(f"Failed to elevate privileges: {e}")
+        
+        
+        
 class MainWindow(QMainWindow):
     def __init__(self) -> None:
 
@@ -160,7 +167,9 @@ class MainWindow(QMainWindow):
 
     
 if __name__ == '__main__':
-    run_as_admin()
+    if not is_admin():
+        request_admin_privileges()
+
     app = QApplication(sys.argv)
     ui = Ui_MainWindow()
     
