@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'notesGui.ui'
+## Form generated from reading UI file 'quotesGui.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.7.0
 ##
@@ -15,8 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QPushButton,
-    QSizePolicy, QTextEdit, QWidget)
+from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QSizePolicy,
+    QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -33,15 +33,23 @@ class Ui_Form(object):
         font.setBold(True)
         self.widgetTitleLabel.setFont(font)
         self.widgetTitleLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.titleEdit = QLineEdit(Form)
-        self.titleEdit.setObjectName(u"titleEdit")
-        self.titleEdit.setGeometry(QRect(30, 35, 141, 22))
-        self.textEdit = QTextEdit(Form)
-        self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setGeometry(QRect(2, 60, 201, 121))
-        self.showFullNoteButton = QPushButton(Form)
-        self.showFullNoteButton.setObjectName(u"showFullNoteButton")
-        self.showFullNoteButton.setGeometry(QRect(50, 182, 101, 20))
+        self.moreButton = QPushButton(Form)
+        self.moreButton.setObjectName(u"moreButton")
+        self.moreButton.setGeometry(QRect(70, 180, 71, 24))
+        self.quoteLabel = QLabel(Form)
+        self.quoteLabel.setObjectName(u"quoteLabel")
+        self.quoteLabel.setGeometry(QRect(20, 40, 161, 131))
+        font1 = QFont()
+        font1.setPointSize(12)
+        font1.setItalic(True)
+        self.quoteLabel.setFont(font1)
+        self.quoteLabel.setWordWrap(True)
+        self.refreshButton = QPushButton(Form)
+        self.refreshButton.setObjectName(u"refreshButton")
+        self.refreshButton.setGeometry(QRect(25, 175, 24, 24))
+        icon = QIcon()
+        icon.addFile(u"../../assets/refresh.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.refreshButton.setIcon(icon)
 
         self.retranslateUi(Form)
 
@@ -50,7 +58,9 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.widgetTitleLabel.setText(QCoreApplication.translate("Form", u"notes()", None))
-        self.showFullNoteButton.setText(QCoreApplication.translate("Form", u"Show full note...", None))
+        self.widgetTitleLabel.setText(QCoreApplication.translate("Form", u"quotes()", None))
+        self.moreButton.setText(QCoreApplication.translate("Form", u"More...", None))
+        self.quoteLabel.setText(QCoreApplication.translate("Form", u"\"It takes courage to grow up and become who you really are.\" ", None))
+        self.refreshButton.setText("")
     # retranslateUi
 

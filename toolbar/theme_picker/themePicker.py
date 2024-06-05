@@ -7,6 +7,7 @@ class ThemePicker(QDialog):
         QDialog.__init__(self)
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
+        self.setWindowTitle("Change color theme")
         self.main_color = main_color
         self.accent_color = accent_color
         
@@ -20,21 +21,21 @@ class ThemePicker(QDialog):
 
     colors_changed = Signal(str, str)
     
-    def open_main_color_picker(self):
+    def open_main_color_picker(self) -> None:
         color = QColorDialog.getColor()
         if color.isValid():
             self.main_color = color.name()
             self.ui.mainColorDisplayWidget.setStyleSheet(f"background-color: {self.main_color};")
 
 
-    def open_accent_color_picker(self):
+    def open_accent_color_picker(self) -> None:
         color = QColorDialog.getColor()
         if color.isValid():
             self.accent_color = color.name()
             self.ui.accentColorDisplayWidget.setStyleSheet(f"background-color: {self.accent_color};")
 
         
-    def save_colors(self):
+    def save_colors(self) -> None:
         self.colors_changed.emit(self.main_color, self.accent_color)
 
         

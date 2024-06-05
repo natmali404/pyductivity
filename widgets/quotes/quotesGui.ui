@@ -33,43 +33,62 @@
     </font>
    </property>
    <property name="text">
-    <string>notes()</string>
+    <string>quotes()</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="titleEdit">
+  <widget class="QPushButton" name="moreButton">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>35</y>
-     <width>141</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit">
-   <property name="geometry">
-    <rect>
-     <x>2</x>
-     <y>60</y>
-     <width>201</width>
-     <height>121</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="showFullNoteButton">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>182</y>
-     <width>101</width>
-     <height>20</height>
+     <x>70</x>
+     <y>180</y>
+     <width>71</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>Show full note...</string>
+    <string>More...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="quoteLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>161</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <italic>true</italic>
+    </font>
+   </property>
+   <property name="text">
+    <string>&quot;It takes courage to grow up and become who you really are.&quot; </string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="refreshButton">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>175</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../../assets/refresh.png</normaloff>../../assets/refresh.png</iconset>
    </property>
   </widget>
  </widget>

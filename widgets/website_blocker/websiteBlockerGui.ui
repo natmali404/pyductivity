@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>197</width>
-    <height>209</height>
+    <height>208</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -31,7 +31,7 @@
   <widget class="QLabel" name="widgetTitleLabel">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>12</x>
      <y>10</y>
      <width>181</width>
      <height>20</height>
@@ -51,7 +51,7 @@
     </font>
    </property>
    <property name="text">
-    <string>pomodoro_timer()</string>
+    <string>website_blocker()</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -60,28 +60,9 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>40</y>
-     <width>51</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Mode:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
+     <x>55</x>
      <y>60</y>
-     <width>71</width>
+     <width>61</width>
      <height>16</height>
     </rect>
    </property>
@@ -92,14 +73,14 @@
     </font>
    </property>
    <property name="text">
-    <string>Time left:</string>
+    <string>Blocker:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="modeLabel">
+  <widget class="QLabel" name="statusLabel">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>40</y>
+     <x>118</x>
+     <y>60</y>
      <width>49</width>
      <height>16</height>
     </rect>
@@ -111,33 +92,14 @@
     </font>
    </property>
    <property name="text">
-    <string>WORK</string>
+    <string>OFF</string>
    </property>
   </widget>
-  <widget class="QLabel" name="timeLeftLabel">
+  <widget class="QPushButton" name="blockButton">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>60</y>
-     <width>49</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>00:00</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="runButton">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>100</y>
+     <x>43</x>
+     <y>90</y>
      <width>121</width>
      <height>51</height>
     </rect>
@@ -149,7 +111,7 @@
     </font>
    </property>
    <property name="text">
-    <string>RUN</string>
+    <string>BLOCK</string>
    </property>
    <property name="icon">
     <iconset>
@@ -165,14 +127,14 @@
   <widget class="QPushButton" name="editButton">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>55</x>
      <y>180</y>
-     <width>75</width>
+     <width>91</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>Edit...</string>
+    <string>Edit websites...</string>
    </property>
   </widget>
  </widget>

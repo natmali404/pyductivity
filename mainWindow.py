@@ -26,13 +26,14 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1078, 770)
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+        MainWindow.resize(1050, 750)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setMinimumSize(QSize(900, 700))
+        MainWindow.setMinimumSize(QSize(1050, 750))
+        MainWindow.setMaximumSize(QSize(1050, 750))
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"background-color: rgb(255, 255, 255);")
@@ -194,6 +195,20 @@ class Ui_MainWindow(object):
         icon1.addFile(u"assets/add.png", QSize(), QIcon.Normal, QIcon.Off)
         self.addWidgetButton.setIcon(icon1)
         self.addWidgetButton.setIconSize(QSize(20, 20))
+        self.reorderWidgetsButton = QPushButton(self.toolbar)
+        self.reorderWidgetsButton.setObjectName(u"reorderWidgetsButton")
+        self.reorderWidgetsButton.setGeometry(QRect(10, 90, 31, 31))
+        icon2 = QIcon()
+        icon2.addFile(u"assets/reorder.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.reorderWidgetsButton.setIcon(icon2)
+        self.reorderWidgetsButton.setIconSize(QSize(26, 26))
+        self.removeWidgetButton = QPushButton(self.toolbar)
+        self.removeWidgetButton.setObjectName(u"removeWidgetButton")
+        self.removeWidgetButton.setGeometry(QRect(10, 130, 31, 31))
+        icon3 = QIcon()
+        icon3.addFile(u"assets/delete.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.removeWidgetButton.setIcon(icon3)
+        self.removeWidgetButton.setIconSize(QSize(26, 26))
 
         self.horizontalLayout.addWidget(self.toolbar)
 
@@ -210,5 +225,7 @@ class Ui_MainWindow(object):
         self.clockLabel.setText("")
         self.colorThemeButton.setText("")
         self.addWidgetButton.setText("")
+        self.reorderWidgetsButton.setText("")
+        self.removeWidgetButton.setText("")
     # retranslateUi
 
